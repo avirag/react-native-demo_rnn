@@ -1,0 +1,25 @@
+{
+  "name": "RnnDemo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.1",
+    "react": "16.5.0",
+    "react-native": "0.57.0",
+    "react-native-navigation": "^2.8.0"
+  },
+  "devDependencies": {
+    "babel-jest": "24.0.0",
+    "jest": "24.0.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.5.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

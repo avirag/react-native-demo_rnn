@@ -14,6 +14,15 @@ export default class Screen2 extends React.Component {
         title: {
           text: 'Screen 2'
         },
+        rightButtons: [
+          {
+            id: 'myDynamicButton',
+            text: 'My Button',
+            component: {
+              name: 'MenuBar'
+            },
+          }
+        ]
       }
     };
   }
@@ -35,6 +44,10 @@ export default class Screen2 extends React.Component {
         />
       </View>
     )
+  }
+
+  navigationButtonPressed({ buttonId }) {
+    alert('button ID:', buttonId);
   }
 }
 

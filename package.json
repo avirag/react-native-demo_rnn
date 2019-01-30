@@ -5,13 +5,17 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "rndebugger-open"
   },
   "dependencies": {
     "@babel/runtime": "^7.3.1",
     "react": "16.5.0",
     "react-native": "0.57.0",
-    "react-native-navigation": "^2.8.0"
+    "react-native-elements": "^1.0.0",
+    "react-native-material-menu": "^0.4.2",
+    "react-native-navigation": "^2.8.0",
+    "react-native-vector-icons": "^6.2.0"
   },
   "devDependencies": {
     "babel-jest": "24.0.0",

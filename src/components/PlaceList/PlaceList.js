@@ -6,6 +6,7 @@ const placeList = props => {
   return (
     <FlatList
       style={styles.listContainer}
+      keyExtractor={item => item.name + item.key}
       data={props.places}
       renderItem={(info) => (
         <ListItem

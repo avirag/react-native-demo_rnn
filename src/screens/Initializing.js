@@ -8,7 +8,7 @@ import backgroundImage from '../assets/background.jpg';
 import HeadingText from '../components/UI/HeadingText/HeadingText';
 import PlaceInput from "../components/PlaceInput/PlaceInput";
 import PlaceList from "../components/PlaceList/PlaceList";
-import PlaceDetail from "../components/PlaceDetail/PlaceDetail";
+import PlaceDetail from "./PlaceDetail/PlaceDetail";
 import placeImage from "../assets/beautiful-place.jpg"
 
 class Initializing extends Component {

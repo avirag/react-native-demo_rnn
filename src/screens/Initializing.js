@@ -8,11 +8,13 @@ import backgroundImage from '../assets/background.jpg';
 import HeadingText from '../components/UI/HeadingText/HeadingText';
 import PlaceInput from "../components/PlaceInput/PlaceInput";
 import PlaceList from "../components/PlaceList/PlaceList";
+import PlaceDetail from "../components/PlaceDetail/PlaceDetail";
 import placeImage from "../assets/beautiful-place.jpg"
 
 class Initializing extends Component {
   state = {
-    places: []
+    places: [],
+    selectedPlace: null
   }
 
   placeAddedHandler = placeName => {
@@ -27,21 +29,46 @@ class Initializing extends Component {
     })
   }
 
-  placeDeletedHandler = key => {
+  placeDeletedHandler = () => {
     this.setState(prevState => {
       return {
-        places: prevState.places.filter(place => place.key !== key)
+        places: prevState.places.filter(place => place.key !== prevState.selectedPlace.key),
+        selectedPlace: null
       }
     });
   }
+
+  modalClosedHandler = () => {
+    this.setState({
+      selectedPlace: null
+    });
+  };
+
+  placeSelectedHandler = key => {
+    this.setState(prevState => {
+      return {
+        selectedPlace: prevState.places.find(place => {
+          return place.key === key;
+        })
+      };
+    });
+  };
 
   render() {
     return (
       <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
         <View style={styles.container}>
           <HeadingText>Please Log in</HeadingText>
+          <PlaceDetail
+            selectedPlace={this.state.selectedPlace}
+            onItemDeleted={this.placeDeletedHandler}
+            onModalClosed={this.modalClosedHandler}
+          />
           <PlaceInput onPlaceAdded={this.placeAddedHandler}/>
-          <PlaceList places={this.state.places} onItemDeleted={this.placeDeletedHandler} />
+          <PlaceList
+            places={this.state.places}
+            onItemSelected={this.placeSelectedHandler}
+          />
         </View>
       </ImageBackground>
     );

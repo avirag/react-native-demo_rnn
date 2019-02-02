@@ -6,6 +6,7 @@ import FindPlace from '../screens/FindPlace/FindPlace';
 import SharePlace from '../screens/SharePlace/SharePlace';
 import PlaceDetail from '../screens/PlaceDetail/PlaceDetail';
 import SideDrawer from '../screens/SideDrawer/SideDrawer';
+import MenuBar from '../UI/MenuBar/MenuBar';
 
 import configureStore from '../store/configureStore';
 
@@ -61,5 +62,10 @@ export default function registerScreens() {
   Navigation.registerComponent(
     'navigation.SideDrawer',
     () => SideDrawer
+  );
+
+  Navigation.registerComponent(
+    'navigation.MenuBar',
+    () => MenuBar
   );
 }

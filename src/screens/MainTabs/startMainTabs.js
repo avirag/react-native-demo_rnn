@@ -29,11 +29,11 @@ const startMainTabs = () => {
                           rightButtons: [
                             {
                               id: 'sideDrawerToggle',
-                              icon: sources[2],
+                              // icon: sources[2],
                               text: 'My Button',
-                              // component: {
-                              //   name: 'MenuBar'
-                              // }
+                              component: {
+                                name: 'navigation.MenuBar'
+                              }
                             }
                           ]
                         }

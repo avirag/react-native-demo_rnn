@@ -5,8 +5,9 @@ import AuthScreen from '../screens/Auth/Auth';
 import FindPlace from '../screens/FindPlace/FindPlace';
 import SharePlace from '../screens/SharePlace/SharePlace';
 import PlaceDetail from '../screens/PlaceDetail/PlaceDetail';
+import UserSearch from '../screens/UserSearch/UserSearch';
 import SideDrawer from '../screens/SideDrawer/SideDrawer';
-import MenuBar from '../UI/MenuBar/MenuBar';
+import MenuBar from '../components/UI/MenuBar/MenuBar';
 
 import configureStore from '../store/configureStore';
 
@@ -67,5 +68,10 @@ export default function registerScreens() {
   Navigation.registerComponent(
     'navigation.MenuBar',
     () => MenuBar
+  );
+
+  Navigation.registerComponent(
+    'navigation.UserSearch',
+    () => UserSearch
   );
 }

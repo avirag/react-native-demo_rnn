@@ -4,8 +4,9 @@ import {
   StyleSheet,
   ImageBackground
 } from 'react-native';
+
 import backgroundImage from '../assets/background.jpg';
-import HeadingText from '../components/UI/HeadingText/HeadingText';
+import HeaderText from '../components/UI/HeaderText/HeaderText';
 import PlaceInput from "../components/PlaceInput/PlaceInput";
 import PlaceList from "../components/PlaceList/PlaceList";
 import PlaceDetail from "./PlaceDetail/PlaceDetail";
@@ -58,7 +59,7 @@ class Initializing extends Component {
     return (
       <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
         <View style={styles.container}>
-          <HeadingText>Please Log in</HeadingText>
+          <HeaderText>Please Log in</HeaderText>
           <PlaceDetail
             selectedPlace={this.state.selectedPlace}
             onItemDeleted={this.placeDeletedHandler}

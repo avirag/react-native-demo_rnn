@@ -5,13 +5,31 @@ const startMainTabs = () => {
   Promise.all([
     Icon.getImageSource('md-map', 30),
     Icon.getImageSource('ios-share-alt', 30),
-    Icon.getImageSource('ios-menu', 30)
+    Icon.getImageSource('ios-menu', 30),
+    Icon.getImageSource('ios-search', 30),
   ]).then(sources => {
     Navigation.setRoot({
       root: {
         bottomTabs: {
           id: 'MainTabsId',
           children: [
+            {
+              component: {
+                name: 'navigation.UserSearch',
+                options: {
+                  bottomTab: {
+                    fontSize: 12,
+                    text: 'Search User',
+                    icon: sources[3]
+                  },
+                  topBar: {
+                    title: {
+                      text: "Search User"
+                    }
+                  }
+                }
+              }
+            },
             {
               stack: {
                 children: [

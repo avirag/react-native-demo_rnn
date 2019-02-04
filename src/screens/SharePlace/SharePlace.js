@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
-
+import ModalExample from '../../components/UI/MenuBar/ModalExample';
 import PlaceInput from '../../components/PlaceInput/PlaceInput';
 import { addPlace } from '../../store/actions/index';
 
@@ -14,6 +14,7 @@ class SharePlace extends Component {
     return (
       <View>
         <PlaceInput onPlaceAdded={this.placeAddedHandler} />
+        <ModalExample />
       </View>
     )
   }

@@ -3,7 +3,6 @@ import { View } from 'react-native';
 import { connect } from 'react-redux';
 import PlaceList from '../../components/PlaceList/PlaceList';
 import { Navigation } from 'react-native-navigation';
-import ModalExample from '../../UI/MenuBar/ModalExample';
 
 class FindPlace extends Component {
   static get options() {
@@ -68,7 +67,6 @@ class FindPlace extends Component {
   render() {
     return (
       <View>
-        <ModalExample />
         <PlaceList
           places={this.props.places}
           onItemSelected={this.itemSelectedHandler}

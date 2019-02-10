@@ -7,6 +7,7 @@ import SharePlace from '../screens/SharePlace/SharePlace';
 import PlaceDetail from '../screens/PlaceDetail/PlaceDetail';
 import UserSearch from '../screens/UserSearch/UserSearch';
 import SideDrawer from '../screens/SideDrawer/SideDrawer';
+import SlideUpDemo from '../screens/SlideUpDemo/SlideUpDemo';
 import MenuBar from '../components/UI/MenuBar/MenuBar';
 
 import configureStore from '../store/configureStore';
@@ -64,5 +65,10 @@ export default function registerScreens() {
   Navigation.registerComponent(
     'navigation.UserSearch',
     () => UserSearch
+  );
+
+  Navigation.registerComponent(
+    'navigation.SlideUpDemo',
+    () => SlideUpDemo
   );
 }

@@ -5,9 +5,14 @@ const startMainTabs = () => {
   Promise.all([
     Icon.getImageSource('md-map', 30),
     Icon.getImageSource('ios-share-alt', 30),
-    Icon.getImageSource('ios-menu', 30),
     Icon.getImageSource('ios-search', 30),
+    Icon.getImageSource('ios-cube', 30)
   ]).then(sources => {
+    const mapIcon = sources[0];
+    const shareIcon = sources[1];
+    const searchIcon = sources[2];
+    const cubeIcon = sources[3];
+
     Navigation.setRoot({
       root: {
         bottomTabs: {
@@ -15,12 +20,29 @@ const startMainTabs = () => {
           children: [
             {
               component: {
+                name: 'navigation.SlideUpDemo',
+                options: {
+                  bottomTab: {
+                    fontSize: 12,
+                    text: 'Slide Up',
+                    icon: cubeIcon
+                  },
+                  topBar: {
+                    title: {
+                      text: "Slide Up Demo"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              component: {
                 name: 'navigation.UserSearch',
                 options: {
                   bottomTab: {
                     fontSize: 12,
                     text: 'Search User',
-                    icon: sources[3]
+                    icon: searchIcon
                   },
                   topBar: {
                     title: {
@@ -47,7 +69,6 @@ const startMainTabs = () => {
                           rightButtons: [
                             {
                               id: 'sideDrawerToggle',
-                              // icon: sources[2],
                               text: 'My Button',
                               component: {
                                 name: 'navigation.MenuBar'
@@ -63,7 +84,7 @@ const startMainTabs = () => {
                   bottomTab: {
                     fontSize: 12,
                     text: 'Find Place',
-                    icon: sources[0]
+                    icon: mapIcon
                   }
                 }
               }
@@ -75,7 +96,7 @@ const startMainTabs = () => {
                   bottomTab: {
                     fontSize: 12,
                     text: 'Share Place',
-                    icon: sources[1]
+                    icon: shareIcon
                   },
                   topBar: {
                     title: {

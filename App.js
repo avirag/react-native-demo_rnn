@@ -12,8 +12,3 @@ Navigation.events().registerAppLaunchedListener(() => {
     }
   });
 });
-
-// Subscribe
-// const navigationButtonEventListener = Navigation.events().registerNavigationButtonPressedListener(({ buttonId }) => {
-
-// });

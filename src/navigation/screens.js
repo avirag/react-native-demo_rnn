@@ -15,15 +15,6 @@ const store = configureStore();
 
 
 export default function registerScreens() {
-  // Navigation.registerComponent(
-  //   'navigation.Initializing',
-  //   () => props => (
-  //     <Provider store={store}>
-  //       <Initializing {...props} />
-  //     </Provider>
-  //   )
-  // );
-
   Navigation.registerComponent(
     'navigation.AuthScreen',
     () => props => (

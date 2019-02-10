@@ -20,20 +20,9 @@ class FindPlace extends Component {
   }
 
   componentWillUnmount() {
-    // Not mandatory
     if (this.navigationEventListener) {
       this.navigationEventListener.remove();
     }
-  }
-
-  navigationButtonPressed({ buttonId }) {
-    // if(buttonId === 'sideDrawerToggle') {
-    //   Navigation.push(this.props.componentId, {
-    //     component: {
-    //       name: 'navigation.SideDrawer'
-    //     }
-    //   });
-    // }
   }
 
   itemSelectedHandler = key => {

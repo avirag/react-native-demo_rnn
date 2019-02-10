@@ -33,11 +33,8 @@ class MenuBar extends React.PureComponent {
         >
           <MenuItem onPress={this.hideMenu}>Menu item 1</MenuItem>
           <MenuItem onPress={this.hideMenu}>Menu item 2</MenuItem>
-          <MenuItem onPress={this.hideMenu} disabled>
-            Menu item 3
-          </MenuItem>
           <MenuDivider />
-          <MenuItem onPress={this.hideMenu}>Menu item 4</MenuItem>
+          <MenuItem onPress={this.hideMenu}>Menu item 3</MenuItem>
         </Menu>
       </View>
     );

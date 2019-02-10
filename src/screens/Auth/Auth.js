@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import HeaderText from '../../components/UI/HeaderText/HeaderText';
-import startMainTabs from '../MainTabs/startMainTabs';
+import startMainTabs from '../startMainTabs';
 
 
 class AuthScreen extends Component {
